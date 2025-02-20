@@ -1,8 +1,7 @@
 name: Build Debug APK
 
 on:
-  workflow_dispatch: # Permitir activación manual
-  push:
+:
     branches:
       - main
   pull_request:
@@ -21,6 +20,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'adopt' # Especificar la distribución de JDK
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
