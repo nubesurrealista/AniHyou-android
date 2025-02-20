@@ -8,7 +8,7 @@ import com.axiel7.anihyou.R
 import com.axiel7.anihyou.utils.ContextUtils.copyToClipBoard
 import com.axiel7.anihyou.utils.ContextUtils.showToast
 import com.axiel7.anihyou.utils.LocaleUtils.getCurrentLanguageTag
-import com.example.deeplviewer.activity.FloatingTextSelection // Nueva línea importada
+import com.example.deeplviewer.activity.FloatingTextSelection
 
 object TranslateUtils {
 
@@ -18,7 +18,7 @@ object TranslateUtils {
             && !openInDeepL(text)
             && !openInGoogleTranslateMini(text)
             && !openInGoogleTranslate(text)
-            && !openInDeepLViewer(text) // Nueva función añadida
+            && !openInDeepLViewer(text)
         ) {
             showToast(R.string.no_app_found_for_this_action)
         }
@@ -117,7 +117,7 @@ object TranslateUtils {
         }
     }
 
-    private fun Context.openInDeepLViewer(text: String): Boolean { // Nueva función añadida
+    private fun Context.openInDeepLViewer(text: String): Boolean {
         return try {
             Intent(Intent.ACTION_PROCESS_TEXT).apply {
                 component = ComponentName(
