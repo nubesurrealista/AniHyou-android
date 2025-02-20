@@ -1,7 +1,5 @@
-name: Build Debug APK
-
-on:
-:
+name: Build Debug APK_dispatch: # Permitir activación manual
+  push:
     branches:
       - main
   pull_request:
