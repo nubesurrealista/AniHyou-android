@@ -1,4 +1,7 @@
-name: Build Debug APK_dispatch: # Permitir activación manual
+name: Build Debug APK
+
+on:
+  workflow_dispatch: # Permitir activación manual
   push:
     branches:
       - main
